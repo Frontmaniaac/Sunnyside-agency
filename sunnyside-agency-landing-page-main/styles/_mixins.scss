@@ -1,0 +1,15 @@
+@mixin breakpoint($dev) {
+  @if $dev==tablet {
+    @media (min-width: 500px) {
+      @content;
+    }
+  } @else if $dev==laptop {
+    @media (min-width: 820px) {
+      @content;
+    }
+  } @else if $dev==laptopL {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  }
+}
